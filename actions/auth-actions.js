@@ -25,9 +25,6 @@ export async function signup(prevState, formData) {
     return { errors };
   }
 
-  console.log("email", email);
-  console.log("password", password);
-
   const hashedPassword = hashUserPassword(password);
 
   try {

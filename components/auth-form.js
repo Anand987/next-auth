@@ -21,7 +21,9 @@ export default function AuthForm({ mode }) {
         <input type="password" name="password" id="password" />
       </p>
       <p>
-        <button type="submit">{mode === 'login' ? 'Login' : 'Create Account'}</button>
+        <button type="submit">
+          {mode === "login" ? "Login" : "Create Account"}
+        </button>
       </p>
       {formState.errors && (
         <ul id="form-errors">
@@ -31,8 +33,12 @@ export default function AuthForm({ mode }) {
         </ul>
       )}
       <p>
-        {mode === 'login' && <Link href="/?mode=signup">Create an account.</Link>}
-        {mode === 'signup' && <Link href="/?mode=login">Login with existing account.</Link>}
+        {mode === "login" && (
+          <Link href="/?mode=signup">Create an account.</Link>
+        )}
+        {mode === "signup" && (
+          <Link href="/?mode=login">Login with existing account.</Link>
+        )}
       </p>
     </form>
   );
